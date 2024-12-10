@@ -1,0 +1,30 @@
+{
+  "type": "record",
+  "name": "Money",
+  "namespace": "io.justtrack.events",
+  "fields": [
+    {
+      "name": "currency",
+      "type": [
+        "string",
+        "null"
+      ],
+      "default": "USD"
+    },
+    {
+      "name": "value",
+      "type": ["double", "null"],
+      "default": 0.0
+    },
+    {
+      "name": "valueEur",
+      "type": "double",
+      "default": 0.0
+    },
+    {
+      "name": "valueUsd",
+      "type": "double",
+      "default": 0.0
+    }
+  ]
+}

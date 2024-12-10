@@ -1,0 +1,15 @@
+{
+  "type": "record",
+  "name": "AnnotatedRevenueEvent",
+  "namespace": "io.justtrack.events.annotated",
+  "fields": [
+    {
+      "name": "base",
+      "type": "io.justtrack.events.RevenueEvent"
+    },
+    {
+      "name": "annotations",
+      "type": "Annotations"
+    }
+  ]
+}
