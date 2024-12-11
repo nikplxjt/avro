@@ -2,7 +2,7 @@ package main
 
 import (
 	"bytes"
-	"container/list"
+	"container/heap"
 	"encoding/json"
 	"errors"
 	"flag"
@@ -211,27 +211,44 @@ func sortFiles(args []string) ([]string, error) {
 	return sortedPaths, nil
 }
 
+type MinHeap []string
+
+func (h MinHeap) Len() int           { return len(h) }
+func (h MinHeap) Less(i, j int) bool { return h[i] < h[j] }
+func (h MinHeap) Swap(i, j int)      { h[i], h[j] = h[j], h[i] }
+func (h *MinHeap) Push(x any) {
+	*h = append(*h, x.(string))
+}
+
+func (h *MinHeap) Pop() any {
+	old := *h
+	n := len(old)
+	x := old[n-1]
+	*h = old[:n-1]
+	return x
+}
+
 func kahnTopologicSort(deps graph, indegree map[string]int) ([]string, error) {
-	queue := list.New()
+	queue := &MinHeap{}
+	heap.Init(queue)
+
 	var result []string
 
 	for node, deg := range indegree {
 		if deg == 0 {
-			queue.PushBack(node)
+			heap.Push(queue, node)
 		}
 	}
 
 	for queue.Len() > 0 {
-		front := queue.Front()
-		node := front.Value.(string)
-		queue.Remove(front)
-
+		front := heap.Pop(queue)
+		node := front.(string)
 		result = append(result, node)
 
 		for neighbor := range deps[node] {
 			indegree[neighbor]--
 			if indegree[neighbor] == 0 {
-				queue.PushBack(neighbor)
+				heap.Push(queue, neighbor)
 			}
 		}
 	}
