@@ -2,7 +2,7 @@
 package testpkg
 
 import (
-	"github.com/hamba/avro/v2"
+	"github.com/nikplxjt/avro/v2"
 )
 
 // Test is a test struct.

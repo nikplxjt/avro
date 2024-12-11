@@ -1,0 +1,178 @@
+{
+  "type": "record",
+  "name": "Annotations",
+  "namespace": "io.justtrack.events.annotated",
+  "fields": [
+    {
+      "name": "adSetId",
+      "type": "int"
+    },
+    {
+      "name": "adSetName",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "adType",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "advertiserId",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "businessUnitId",
+      "type": "int"
+    },
+    {
+      "name": "campaignId",
+      "type": "int"
+    },
+    {
+      "name": "campaignType",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "channelId",
+      "type": "int"
+    },
+    {
+      "name": "clientId",
+      "type": "int"
+    },
+    {
+      "name": "creativeId",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "creativeName",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "countryId",
+      "type": "int"
+    },
+    {
+      "name": "deviceId",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "exchangeId",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "exchangeName",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "externalAdSetId",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "externalCreativeId",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "globalNetworkId",
+      "type": "int"
+    },
+    {
+      "name": "initialClientVersion",
+      "type": "int",
+      "default": 0
+    },
+    {
+      "name": "installAppVersionCode",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "installAppVersionName",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "isIncent",
+      "type": "boolean",
+      "default": false
+    },
+    {
+      "name": "networkId",
+      "type": "int"
+    },
+    {
+      "name": "platformId",
+      "type": "int"
+    },
+    {
+      "name": "isRedownload",
+      "type": "boolean",
+      "default": false
+    },
+    {
+      "name": "sourceBundleId",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "sourceCategory",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "sourceId",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "sourceName",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "sourcePlacement",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "sourcePublisher",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "sourceUrl",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "userDate",
+      "type": ["null",
+        {
+          "type": "long",
+          "logicalType": "timestamp-micros"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "userType",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "metricSources",
+      "type": ["null", "MetricSources"],
+      "default": null
+    }
+  ]
+}

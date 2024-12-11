@@ -12,8 +12,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/hamba/avro/v2"
-	"github.com/hamba/avro/v2/gen"
+	"github.com/nikplxjt/avro/v2"
+	"github.com/nikplxjt/avro/v2/gen"
 	"golang.org/x/tools/imports"
 )
 

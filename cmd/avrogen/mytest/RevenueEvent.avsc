@@ -1,0 +1,115 @@
+{
+  "type": "record",
+  "name": "RevenueEvent",
+  "namespace": "io.justtrack.events",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string"
+    },
+    {
+      "name": "transactionId",
+      "type": "string"
+    },
+    {
+      "name": "userUuid",
+      "type": "string"
+    },
+    {
+      "name": "userInstallId",
+      "type": "string"
+    },
+    {
+      "name": "userAdvertiserId",
+      "type": "string"
+    },
+    {
+      "name": "userAttributionId",
+      "type": [
+        "string",
+        "null"
+      ],
+      "default": ""
+    },
+    {
+      "name": "monetizationBundleId",
+      "type": "string"
+    },
+    {
+      "name": "monetizationInstanceName",
+      "type": "string"
+    },
+    {
+      "name": "monetizationItemName",
+      "type": "string"
+    },
+    {
+      "name": "monetizationItemType",
+      "type": "string"
+    },
+    {
+      "name": "monetizationNetwork",
+      "type": "string"
+    },
+    {
+      "name": "monetizationPlacement",
+      "type": "string"
+    },
+    {
+      "name": "monetizationProvider",
+      "type": "string"
+    },
+    {
+      "name": "monetizationSegment",
+      "type": "string"
+    },
+    {
+      "name": "monetizationTestGroup",
+      "type": "string"
+    },
+    {
+      "name": "monetizationType",
+      "type": "string"
+    },
+    {
+      "name": "money",
+      "type": "Money"
+    },
+    {
+      "name": "eventCount",
+      "type": "int"
+    },
+    {
+      "name": "revenueType",
+      "type": "string",
+      "default": "Ad Revenue"
+    },
+    {
+      "name": "source",
+      "type": "string",
+      "default": "import"
+    },
+    {
+      "name": "purchaseEventId",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "happenedAt",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-millis"
+      }
+    },
+    {
+      "name": "createdAt",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-millis"
+      }
+    }
+  ]
+}
